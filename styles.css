@@ -1,0 +1,125 @@
+/* General reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Flexbox setup for the main chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 600px; /* Maximum width of the chat interface */
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* Header styling */
+.chat-header {
+    padding: 16px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.toggle-btn.active {
+    color: white;
+    background-color: #4a4a4a;
+}
+
+/* Chat body styling */
+.chat-body {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Footer with input and send button */
+.chat-footer {
+    padding: 16px;
+    background-color: #fafafa;
+    border-top: 1px solid #ccc;
+    display: flex;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Icons and send button styling */
+.fas {
+    margin-right: 5px;
+}
+
+.send-button {
+    background-color: #8a4bff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.send-button:hover {
+    background-color: #7a3fe0;
+}
+
+.send-button:focus {
+    outline: none;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .chat-container {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .toggle-btn {
+        font-size: 16px;
+    }
+
+    .chat-body {
+        padding: 20px 30px;
+    }
+
+    .chat-footer {
+        padding: 16px 30px;
+    }
+
+    input[type="text"] {
+        padding: 15px;
+    }
+}
