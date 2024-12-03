@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Resume - Alexa McKnight</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css">
+    <title>Sam's House Quiz</title>
+    <!-- Correct path to CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="quiz-container">
+        <!-- Intro Page -->
+        <div id="intro-page">
+            <h1>So You’ve Got a 4,000 Sq. Ft. House... Now What?</h1>
+            <p>Let’s figure out what you actually need to turn it into the ultimate bachelor pad—well, a bachelor pad <em>with a twist</em> since I’m literally your girlfriend and made this quiz.</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
 
-<div class="chat-container">
-    <div class="chat-header">
-        <button id="mcknight35" class="toggle-btn active"><i class="fas fa-bolt"></i> McKnight-3.5</button>
-        <button id="mcknight4" class="toggle-btn"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> McKnight-4</button>
-    </div>
-    <div class="chat-body" id="chatBody">
-        <!-- Typing effect content will be added here dynamically -->
-    </div>
-    <div class="chat-footer">
-        <input type="text" id="chatInput" placeholder="Type your message to Alexa here..." />
-        <button id="sendBtn" class="send-button"><i class="fa fa-paper-plane"></i></button>
-    </div>
-</div>
+        <!-- Question Container -->
+        <div id="question-container" class="hidden">
+            <!-- Questions will be dynamically inserted here by script.js -->
+        </div>
 
-<script src="script.js"></script>
+        <!-- Results Container -->
+        <div id="results-container" class="hidden">
+            <h2>Here’s Your Game Plan!</h2>
+            <p>We’ve done the hard work. You just need to click ‘add to cart.’</p>
+            <div id="results">
+                <!-- Results will be dynamically inserted here by script.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Correct path to JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
